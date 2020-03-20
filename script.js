@@ -23,11 +23,14 @@ function generatePassword() {
   var passwordSize = prompt("What is your password length? (Choose a length 8-128)");
   var lowerCase = confirm("Would you like your password to contain lowercase characters?");
   var upperCase = confirm("Would you like your password to contain uppercase characters?");
-  //var numeric = confirm("Should your password contain numeric characters?");
-  //var special = confirm("Should your password contain special characters?");
+  var numeric = confirm("Should your password contain numeric characters?");
+  var special = confirm("Should your password contain special characters?");
   var localPasswordLower = "";
-  var localChar = "";
   var localPasswordUpper = "";
+  var localPasswordNumeric = "";
+  var localPasswordSpecial = "";
+  var localChar = "";
+  
 
   var localCharUpper = "";
   var passwordSizeInt = parseInt(passwordSize, 10);
@@ -38,7 +41,7 @@ function generatePassword() {
   }
 
   if (lowerCase) {
-    alert("LOWER");
+    //alert("LOWER");
       for (i = 0; i < passwordSize; i++ ) {
           localChar = lowerCaseCharacters[Math.floor(Math.random() * lowerCaseCharacters.length)];
           localPasswordLower += localChar;
@@ -46,7 +49,7 @@ function generatePassword() {
   }
 
   if (upperCase) {
-    alert("UPPER");
+   // alert("UPPER");
     for (i = 0; i < passwordSize; i++ ) {
          localChar = upperCaseCharacters[Math.floor(Math.random() * upperCaseCharacters.length)];
          localPasswordUpper += localChar;
@@ -54,20 +57,50 @@ function generatePassword() {
   }
 
 
-  //if (numeric) {
-  //  alert("NUMERIC");
+  if (numeric) {
+    //alert("NUMERIC");
+    for (i = 0; i < passwordSize; i++ ) {
+        localChar = numericCharacters[Math.floor(Math.random() * numericCharacters.length)];
+        localPasswordNumeric += localChar;
+      }
+  }
+
+
+  if (special) {
+   // alert("SPECIAL");
+    for (i = 0; i < passwordSize; i++ ) {
+      localChar = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
+      localPasswordSpecial += localChar;
+    }
+  } 
+
+  
+
+  //var FinalArray = [localPasswordSpecial[0] + localPasswordNumeric[0] + localPasswordUpper[0] + localPasswordLower[0]];
+
+  var FinalArray = "";
+  var FinalArray = [localPasswordSpecial + localPasswordNumeric + localPasswordUpper + localPasswordLower];
+  //var FinalArray = [localPasswordSpecial[0] + localPasswordNumeric[0] + localPasswordUpper[0] + localPasswordLower[0]];
+  // alert(FinalArray[Math.floor(Math.random())]) ;
+  //FinalArray.concat(localPasswordSpecial,localPasswordNumeric,localPasswordUpper,localPasswordLower);  
+  var FinalArrayPassword ="";
+
+  //for (i = 0; i < passwordSize; i++ ) {
+  for (i = 0; i < 1; i++ ) {
+    alert=("Foo");
+      localChar = FinalArray[Math.floor(Math.random() * FinalArray.length)];
+      FinalArrayPassword += localChar;
+  }
+  alert=(numericCharacters.length)
+  //return FinalArray[0] + FinalArray[8] + FinalArray[24]; 
+  return FinalArray;
+
+ // if (upperCase) {
+   // return localPasswordUpper; 
   //}
-
-
-  //if (special) {
-  //  alert("SPECIAL");
-  //} 
-  if (upperCase) {
-    return localPasswordUpper; 
-  }
-  else {
-      return localPasswordLower;
-  }
+  //else {
+    //  return localPasswordLower;
+  //}
 
   
   
