@@ -19,6 +19,7 @@ function writePassword() {
 
 
 
+
 function generatePassword() {
   var passwordSize = prompt("What is your password length? (Choose a length 8-128)");
   var lowerCase = confirm("Would you like your password to contain lowercase characters?");
@@ -78,20 +79,17 @@ function generatePassword() {
 
   //var FinalArray = [localPasswordSpecial[0] + localPasswordNumeric[0] + localPasswordUpper[0] + localPasswordLower[0]];
 
-  var FinalArray = "";
+  var FinalArray = [];
   var FinalArray = [localPasswordSpecial + localPasswordNumeric + localPasswordUpper + localPasswordLower];
-  //var FinalArray = [localPasswordSpecial[0] + localPasswordNumeric[0] + localPasswordUpper[0] + localPasswordLower[0]];
-  // alert(FinalArray[Math.floor(Math.random())]) ;
-  //FinalArray.concat(localPasswordSpecial,localPasswordNumeric,localPasswordUpper,localPasswordLower);  
   var FinalArrayPassword ="";
 
   //for (i = 0; i < passwordSize; i++ ) {
   for (i = 0; i < 1; i++ ) {
-    alert=("Foo");
+
       localChar = FinalArray[Math.floor(Math.random() * FinalArray.length)];
       FinalArrayPassword += localChar;
   }
-  alert=(numericCharacters.length)
+
   //return FinalArray[0] + FinalArray[8] + FinalArray[24]; 
   return FinalArray;
 
@@ -108,37 +106,6 @@ function generatePassword() {
 
 
 }
-
-
-
- // var passwordLength = prompt("What is your password length? (Choose a length 8-128)");
-  //var complexity = document.getElementsByName("passwordLength").value;
-
-  //Password values
-  //var values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*?";
-
-  //var passcode = "";
-
-  //for(var i = 0; i <= complexity; i++){
- //   passcode = passcode + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
- // }
-
-  //Put password in text box
-  //document.getElementById("#password").value = passcode;
-
-  
-  
-  
-  //var lowerCase = confirm("Would you like your password to contain lowercase characters?");
-  //var upperCase = confirm("Would you like your password to contain uppercase characters?");
-  //var numeric = confirm("Should your password contain numeric characters?");
-  //var specialCharacters = confirm("Should your password contain special characters?");
-  //alert("Alert")
-
-
-
-  
-
 
 
 // Add event listener to generate button

@@ -1,8 +1,13 @@
 # 03 JavaScript: Password Generator
 
+- This is the repo for Homework 3 of the UT coding boot camp
+
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+## Notes:
+
+I found this homework to be pretty challenging. Unfortunately I wasn't able to get it working exactly as intended. I was able to collect and store user input through prompts and confirms, and I was able to create IF statements to use the correct arrays based on how the user answered the TRUE/FALSE statements. So, I was able to create random passwords using only one array at a time but I was unable to put it all together. I had a peek at some other classmate's code and realized I was really overthinking things...
+
 
 ## User Story
 
@@ -32,17 +37,5 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-The following image demonstrates the application functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
 
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
