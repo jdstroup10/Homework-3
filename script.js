@@ -22,13 +22,17 @@ function writePassword() {
 function generatePassword() {
   var passwordSize = prompt("What is your password length? (Choose a length 8-128)");
   var lowerCase = confirm("Would you like your password to contain lowercase characters?");
-  //var upperCase = confirm("Would you like your password to contain uppercase characters?");
+  var upperCase = confirm("Would you like your password to contain uppercase characters?");
   //var numeric = confirm("Should your password contain numeric characters?");
   //var special = confirm("Should your password contain special characters?");
-  var localPassword = "";
+  var localPasswordLower = "";
   var localChar = "";
+  var localPasswordUpper = "";
+
+  var localCharUpper = "";
+  var passwordSizeInt = parseInt(passwordSize, 10);
   //stops working if you go higher than 10
-  alert(passwordSize)
+  //alert(passwordSize)
   if (passwordSize < 8) {
     alert("Error: Password length must be between 8-128");
   }
@@ -37,13 +41,17 @@ function generatePassword() {
     alert("LOWER");
       for (i = 0; i < passwordSize; i++ ) {
           localChar = lowerCaseCharacters[Math.floor(Math.random() * lowerCaseCharacters.length)];
-          localPassword += localChar;
+          localPasswordLower += localChar;
       }
   }
 
-  //if (upperCase) {
-   // alert("UPPER");
-  //}
+  if (upperCase) {
+    alert("UPPER");
+    for (i = 0; i < passwordSize; i++ ) {
+         localChar = upperCaseCharacters[Math.floor(Math.random() * upperCaseCharacters.length)];
+         localPasswordUpper += localChar;
+      }
+  }
 
 
   //if (numeric) {
@@ -54,8 +62,14 @@ function generatePassword() {
   //if (special) {
   //  alert("SPECIAL");
   //} 
+  if (upperCase) {
+    return localPasswordUpper; 
+  }
+  else {
+      return localPasswordLower;
+  }
 
-  return localPassword;
+  
   
 
 
